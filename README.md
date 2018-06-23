@@ -1,6 +1,6 @@
 # Lodi Theme
 
-This theme is a Hugo port of [Alexis Collado's portfolio website](http://www.alexiscollado.com). It is meant to be a portfolio theme, with sections for describing yourself, your 
+This theme is a Hugo port of [Alexis Collado's portfolio website](http://www.alexiscollado.com). It is meant to be a portfolio theme, with sections for describing yourself, your
 process, and some case studies.
 
 ![](images/screenshot.png)
@@ -11,7 +11,47 @@ Follow the themes guide on the [Hugo website](https://gohugo.io/themes/installin
 
 ```sh
 $ cd themes
-$ git clone https://github.com/xaviablaza/hugo-lodi-theme.git
+$ git clone git@github.com:johnrlive/hugo-lodi-theme.git
+```
+
+#### get the submodule initially
+in Hugo root path do:
+```sh
+$ git submodule add git@github.com:johnrlive/hugo-lodi-theme.git themes/hugo-lodi-theme
+$ git submodule init
+```
+
+#### time passes, submodule upstream is updated
+#### and you now want to update
+
+#### change to the submodule directory
+```sh
+$ cd submodule_dir
+```
+
+#### checkout desired branch
+```sh
+$ git checkout master
+```
+
+#### update
+```sh
+$ git pull
+```
+
+#### get back to your project root
+```sh
+$ cd ..
+```
+
+#### now the submodules are in the state you want, so
+```sh
+$ git commit -am "Pulled down update to submodule_dir"
+```
+
+## Or, if you're a busy person:
+```sh
+$ git submodule foreach git pull origin master
 ```
 
 ## Getting started
